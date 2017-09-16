@@ -8,6 +8,7 @@
 
 #top-container {
 	text-align: center;
+	padding-top: 10px;
 }
 
 #player1-score {
@@ -18,13 +19,45 @@
 	display: inline-block;
 }
 
+#game-grid {
+    padding-bottom: 50px;
+}
 
+div.table {
+  width: 600px;
+  height: 500px;
+  border-collapse: collapse;
+  border-color: black;
+  margin-left: 240px;
+}
 
+.divTable.table .divTableCell, .divTable.table .divTableHead {
+  border: 1px solid #AAAAAA;
+  padding: 4px 1px;
+}
 
+.divTable{ 
+	display: table; 
+}
+.divTableRow { 
+	display: table-row; 
+}
 
+.divTableCell, .divTableHead { 
+	display: table-cell;
+}
+.divTableBody { 
+	display: table-row-group;
+}
 
+.h-line {
+	height: 0.01em;
 
+}
 
+.v-line {
+	width: 25px
+}
 
 
 .player1 {
@@ -38,8 +71,10 @@
 }
 .box-complete1  {
 	background-color: red;
+	border-color: red;
 }
 
 .box-complete2 {
-	background-color: red;
+	background-color: green;
+	border-color: green;
 }
