@@ -1,0 +1,39 @@
+
+#gameboard {
+	background-color: yellow;
+	margin: 10px 200px;
+	width: 75%;
+
+}
+
+#top-container {
+	text-align: center;
+}
+
+#player1-score {
+	display: inline-block;
+}
+
+#player2-score {
+	display: inline-block;
+}
+
+#game-grid{
+	margin: 0 150px;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0px;
+    border-collapse:collapse;  /* <--- add this so all the internal <td>s share adjacent borders  */
+    border:3px dashed grey;	
+}
+
+td {
+	border:3px dashed grey;
+}
+
+.h-line {
+	width: 40px;
+	height: 5px;
+}
