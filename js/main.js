@@ -3,44 +3,50 @@ $(function (){
 	var currentPlayer = 1
 	var player1Score = 0;
 	var player2Score = 0;
-
 	var count = 0; 
+	var maxMoves = 24;
 
 
-	function playGame () {
+	function playGame() {
 		$('.lines').one('click', function(event) {
-				// $(this).html(currentPlayer);
-				count++;
-				// checkWinner();
+			
+			count++;
+		// checkWinner();
+		
 
 			if (currentPlayer === 1) {
-				$(this).addClass('player1');
+				$(this).addClass('player1 line-drawn');
 				currentPlayer = 0; 
+				checkBox();
 				
+					
 			} else {
-				$(this).addClass('player2');
+				$(this).addClass('player2 line-drawn');
 				currentPlayer = 1;
-			}
-			if ($(this).hasClass(".line-drawn")) {
-			$(this).addClass(".line-drawn");
-			console.log("working");
-		}
-
-		
+				checkBox();
+				
+			};
+			
 		});
-
-		$('.match11').on("click",function(){
-			$("."+$(this).attr("class").substr(0, $(this).attr("class").length-1)).addClass("topone").siblings()
-   		});
-
-		
-
-
-
-
 	};
 
+	// All lines and boxes as variables
+
+	var $line1 = $("#1of0");
+
+	function checkBox() {
+		for (var i = 0; i < maxMoves; i++) {
+			if ($("#1of0").hasClass('line-drawn')) {
+			 console.log('working');
+			 $("#1of0").removeClass('line-drawn');	
+			 maxMoves--;
+			}
+		}
+	}
 	playGame();
+
+
+	
 
 
 
