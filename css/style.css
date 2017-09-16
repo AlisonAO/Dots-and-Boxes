@@ -32,7 +32,8 @@ div.table {
 }
 
 .divTable.table .divTableCell, .divTable.table .divTableHead {
-  border: 1px solid #AAAAAA;
+  border width: 1px;
+  border-style: dashed;
   padding: 4px 1px;
 }
 
@@ -50,24 +51,41 @@ div.table {
 	display: table-row-group;
 }
 
+.lines {
+	vertical-align: top; 
+}
+
 .h-line {
 	height: 0.01em;
-
 }
 
 .v-line {
 	width: 25px
 }
 
+/*This is the CSS for the combinations*/
 
+.topone {
+	background-color: pink;
+}
+
+/*This is the CSS to be added to the elements with JS*/
 .player1 {
-	background-color: green;
-	border-color: green;
+	background-color: green !important;
+	border-color: green !important;
+	border-style: solid !important;
 }
 
 .player2 {
-	background-color: red;
-	background-color: red;
+	background-color: red !important;
+	border-color: red !important;
+	border-style: solid !important;
+}
+
+.line-drawn {
+	border width:  1px;
+  border-style: dashed;
+
 }
 .box-complete1  {
 	background-color: red;
