@@ -84,9 +84,43 @@ div.table {
 
 .line-drawn {
 	border width:  1px;
-  border-style: dashed;
+}
+
+.player1-bordertop {
+	border-top: solid;
+}
+
+.player2-bordertop {
+	border-top: solid;
 
 }
+
+.player1-borderleft {
+	border-left: solid;
+
+}
+
+.player2-borderleft {
+	border-left: solid;
+}
+
+.player1-borderright {
+	border-right: solid;
+
+}
+
+.player2-borderright {
+	border-right: solid;
+}
+
+.player1-borderbottom {
+	border-bottom: solid;
+}
+
+.player2-borderbottom {
+	border-bottom: solid;
+}
+
 .box-complete1  {
 	background-color: red;
 	border-color: red;
@@ -96,3 +130,5 @@ div.table {
 	background-color: green;
 	border-color: green;
 }
+
+
