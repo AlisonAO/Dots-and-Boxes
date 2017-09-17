@@ -86,39 +86,21 @@ div.table {
 	border width:  1px;
 }
 
-.player1-bordertop {
-	border-top: solid;
+.bordertop {
+	border-top: 1px solid transparent !important;
+	background-color: black !important;
 }
 
-.player2-bordertop {
-	border-top: solid;
-
+.borderleft {
+	border-left: 1px solid transparent;
 }
 
-.player1-borderleft {
-	border-left: solid;
-
+.borderright {
+	border-right: 1px solid transparent;
 }
 
-.player2-borderleft {
-	border-left: solid;
-}
-
-.player1-borderright {
-	border-right: solid;
-
-}
-
-.player2-borderright {
-	border-right: solid;
-}
-
-.player1-borderbottom {
-	border-bottom: solid;
-}
-
-.player2-borderbottom {
-	border-bottom: solid;
+.borderbottom {
+	border-bottom: 1px solid transparent;
 }
 
 .box-complete1  {
