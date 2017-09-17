@@ -87,6 +87,30 @@ $(function (){
 				maxMoves--;
 				$('#box4').addClass('borderright');
 			}
+			if ($('#1of3').hasClass('line-drawn')) {
+				$('#1of3').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box1').addClass('borderbottom');
+				$('#box5').addClass('bordertop');
+			}
+			if ($('#2of3').hasClass('line-drawn')) {
+				$('#2of3').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box2').addClass('borderbottom');
+				$('#box6').addClass('bordertop');
+			}
+			if ($('#3of3').hasClass('line-drawn')) {
+				$('#3of3').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box3').addClass('borderbottom');
+				$('#box7').addClass('bordertop');
+			}
+			if ($('#4of3').hasClass('line-drawn')) {
+				$('#4of3').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box4').addClass('borderbottom');
+				$('#box8').addClass('bordertop');
+			}
 		}
 	}
 	playGame();
