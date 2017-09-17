@@ -162,7 +162,59 @@ $(function (){
 				maxMoves--;
 				$('#box8').addClass('borderbottom');
 				$('#box12').addClass('bordertop');
-			}	
+			}
+			if ($('#1of6').hasClass('line-drawn')) {
+				$('#1of6').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box9').addClass('borderleft');
+			}
+			if ($('#2of6').hasClass('line-drawn')) {
+				$('#2of6').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box10').addClass('borderleft');
+				$('#box9').addClass('borderright');
+			}
+			if ($('#3of6').hasClass('line-drawn')) {
+				$('#3of6').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box11').addClass('borderleft');
+				$('#box10').addClass('borderright');
+			}
+			if ($('#4of6').hasClass('line-drawn')) {
+				$('#4of6').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box12').addClass('borderleft');
+				$('#box11').addClass('borderright');
+			}
+			if ($('#5of6').hasClass('line-drawn')) {
+				$('#5of6').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box12').addClass('borderright');
+			}
+			if ($('#1of7').hasClass('line-drawn')) {
+				$('#1of7').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box13').addClass('bordertop');
+				$('#box9').addClass('borderbottom');
+			}
+			if ($('#2of7').hasClass('line-drawn')) {
+				$('#2of7').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box14').addClass('bordertop');
+				$('#box10').addClass('borderbottom');
+			}
+			if ($('#3of7').hasClass('line-drawn')) {
+				$('#3of7').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box15').addClass('bordertop');
+				$('#box11').addClass('borderbottom');
+			}
+			if ($('#4of7').hasClass('line-drawn')) {
+				$('#4of7').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box16').addClass('bordertop');
+				$('#box12').addClass('borderbottom');
+			}				
 		}
 	}
 	playGame();
