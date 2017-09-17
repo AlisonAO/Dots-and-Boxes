@@ -214,7 +214,60 @@ $(function (){
 				maxMoves--;
 				$('#box16').addClass('bordertop');
 				$('#box12').addClass('borderbottom');
-			}				
+			}
+			if ($('#1of8').hasClass('line-drawn')) {
+				$('#1of8').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box13').addClass('borderleft');
+			}
+			if ($('#2of8').hasClass('line-drawn')) {
+				$('#2of8').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box14').addClass('borderleft');
+				$('#box13').addClass('borderright');
+			}
+			if ($('#3of8').hasClass('line-drawn')) {
+				$('#3of8').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box15').addClass('borderleft');
+				$('#box14').addClass('borderright');
+			}
+			if ($('#4of8').hasClass('line-drawn')) {
+				$('#4of8').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box16').addClass('borderleft');
+				$('#box15').addClass('borderright');
+			}
+			if ($('#5of8').hasClass('line-drawn')) {
+				$('#5of8').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box17').addClass('borderleft');
+				$('#box16').addClass('borderright');
+			}
+			if ($('#1of9').hasClass('line-drawn')) {
+				console.log('working');
+				$('#1of9').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box13').addClass('borderbottom');
+			}
+			if ($('#2of9').hasClass('line-drawn')) {
+				console.log('working');
+				$('#2of9').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box14').addClass('borderbottom');
+			}
+			if ($('#3of9').hasClass('line-drawn')) {
+				console.log('working');
+				$('#3of9').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box15').addClass('borderbottom');
+			}
+			if ($('#4of9').hasClass('line-drawn')) {
+				console.log('working');
+				$('#4of9').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box16').addClass('borderbottom');
+			}								
 		}
 	}
 	playGame();
