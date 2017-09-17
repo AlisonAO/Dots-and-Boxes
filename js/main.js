@@ -111,6 +111,34 @@ $(function (){
 				$('#box4').addClass('borderbottom');
 				$('#box8').addClass('bordertop');
 			}
+			if ($('#1of4').hasClass('line-drawn')) {
+				$('#1of4').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box5').addClass('borderleft');
+			}
+			if ($('#2of4').hasClass('line-drawn')) {
+				$('#2of4').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box6').addClass('borderleft');
+				$('#box5').addClass('borderright');
+			}
+			if ($('#3of4').hasClass('line-drawn')) {
+				$('#3of4').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box7').addClass('borderleft');
+				$('#box6').addClass('borderright');
+			}
+			if ($('#4of4').hasClass('line-drawn')) {
+				$('#4of4').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box8').addClass('borderleft');
+				$('#box7').addClass('borderright');
+			}
+			if ($('#5of4').hasClass('line-drawn')) {
+				$('#5of4').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box8').addClass('borderright');
+			}	
 		}
 	}
 	playGame();
