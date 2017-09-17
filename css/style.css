@@ -63,11 +63,6 @@ div.table {
 	width: 25px
 }
 
-/*This is the CSS for the combinations*/
-
-.topone {
-	background-color: pink;
-}
 
 /*This is the CSS to be added to the elements with JS*/
 .player1 {
@@ -95,14 +90,17 @@ div.table {
 
 .borderleft {
 	border-left: 1px solid transparent;
+	background-color: black !important;
 }
 
 .borderright {
 	border-right: 1px solid transparent;
+	background-color: black;
 }
 
 .borderbottom {
 	border-bottom: 1px solid transparent;
+	background-color: black;
 }
 
 .box-complete1  {

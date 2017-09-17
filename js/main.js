@@ -27,7 +27,7 @@ $(function (){
 	};
 
 
-//<---This may need fixing--->
+//<---This function adds different border properties if a line has been clicked--->
 	function checkBox() {
 		for (var i = 0; i < maxMoves; i++) {
 			if ($('#1of1').hasClass('line-drawn')) {
@@ -53,6 +53,39 @@ $(function (){
 				$('#4of1').removeClass('line-drawn');	
 				maxMoves--;
 				$('#box4').addClass('bordertop');
+			}
+			if ($('#1of2').hasClass('line-drawn')) {
+				console.log('working');
+				$('#1of2').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box1').addClass('borderleft');
+			}
+			if ($('#2of2').hasClass('line-drawn')) {
+				console.log('working');
+				$('#2of2').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box2').addClass('borderleft');
+				$('#box1').addClass('borderright');
+			}
+			if ($('#3of2').hasClass('line-drawn')) {
+				console.log('working');
+				$('#3of2').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box3').addClass('borderleft');
+				$('#box2').addClass('borderright');
+			}
+			if ($('#4of2').hasClass('line-drawn')) {
+				console.log('working');
+				$('#4of2').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box4').addClass('borderleft');
+				$('#box3').addClass('borderright');
+			}
+			if ($('#5of2').hasClass('line-drawn')) {
+				console.log('working');
+				$('#5of2').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box4').addClass('borderright');
 			}
 		}
 	}
