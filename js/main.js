@@ -5,6 +5,7 @@ $(function (){
 	var player2Score = 0;
 	var count = 0; 
 	var maxMoves = 24;
+	var maxMoves2 = 24;
 
 
 	function playGame() {
@@ -14,11 +15,14 @@ $(function (){
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
 				checkBox();
+				makeBox();
 				currentPlayer = 0; 
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
-				checkBox();	
+				// makeBox();
+				checkBox();
+				makeBox();
 				currentPlayer = 1;
 				
 			};
@@ -267,9 +271,29 @@ $(function (){
 				$('#4of9').removeClass('line-drawn');	
 				maxMoves--;
 				$('#box16').addClass('borderbottom');
-			}								
-		}
-	}
+			};								
+		};
+	};
+
+	function makeBox() {
+		for (var i = 0; i < maxMoves2; i++) {
+			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
+				&& $('#box1').hasClass('bordertop') && currentPlayer == 1) {
+				$('box1').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box1').addClass('box-complete1'); 
+			};
+			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
+				&& $('#box1').hasClass('bordertop') && currentPlayer == 0) {
+				$('box1').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box1').addClass('box-complete2'); 
+			};
+		};
+	};
+
 	playGame();
 
 

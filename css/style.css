@@ -84,33 +84,37 @@ div.table {
 }
 
 .bordertop {
-	border-top: 1px solid transparent !important;
-	background-color: black !important;
+	border-top: solid;
+	border-top-width: 1px;
+	border-top-color: transparent; 
 }
 
 .borderleft {
-	border-left: 1px solid transparent;
-	background-color: black !important;
+	border-left: solid;
+	border-left-width: 1px;
+	border-left-color: transparent;
 }
 
 .borderright {
-	border-right: 1px solid transparent;
-	background-color: black;
+	border-right: solid;
+	border-right-width: 1px;
+	border-right-color: transparent; 
 }
 
 .borderbottom {
-	border-bottom: 1px solid transparent;
-	background-color: black;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: transparent;
 }
 
 .box-complete1  {
-	background-color: red;
-	border-color: red;
+	background-color: green;
+	border-color: green !important;
 }
 
 .box-complete2 {
-	background-color: green;
-	border-color: green;
+	background-color: red;
+	border-color: red !important;
 }
 
 
