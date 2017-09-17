@@ -36,6 +36,24 @@ $(function (){
 				maxMoves--;
 				$('#box1').addClass('bordertop');
 			}
+			if ($('#2of1').hasClass('line-drawn')) {
+				console.log('working');
+				$('#2of1').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box2').addClass('bordertop');
+			}
+			if ($('#3of1').hasClass('line-drawn')) {
+				console.log('working');
+				$('#3of1').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box3').addClass('bordertop');
+			}
+			if ($('#4of1').hasClass('line-drawn')) {
+				console.log('working');
+				$('#4of1').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box4').addClass('bordertop');
+			}
 		}
 	}
 	playGame();

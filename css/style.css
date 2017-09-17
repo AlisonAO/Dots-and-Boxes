@@ -74,12 +74,14 @@ div.table {
 	background-color: green !important;
 	border-color: green !important;
 	border-style: solid !important;
+	border-width: 1px !important;
 }
 
 .player2 {
 	background-color: red !important;
 	border-color: red !important;
 	border-style: solid !important;
+	border-width: 1px !important;
 }
 
 .line-drawn {
