@@ -11,6 +11,7 @@ $(function (){
 	function playGame() {
 		$('.lines').one('click', function(event) {
 			count++;
+			
 		// checkWinner();
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
@@ -23,6 +24,7 @@ $(function (){
 				// makeBox();
 				checkBox();
 				makeBox();
+				// makeBox();
 				currentPlayer = 1;
 				
 			};
@@ -279,10 +281,11 @@ $(function (){
 		for (var i = 0; i < maxMoves2; i++) {
 			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
 				&& $('#box1').hasClass('bordertop') && currentPlayer == 1) {
-				$('box1').removeClass('bordertop');
 				console.log('it should change');
+				$('#box1').removeClass('bordertop');
 				maxMoves2--;
 				$('#box1').addClass('box-complete1'); 
+	
 			};
 			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
 				&& $('#box1').hasClass('bordertop') && currentPlayer == 0) {
