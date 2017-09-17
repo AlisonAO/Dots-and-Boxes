@@ -138,6 +138,30 @@ $(function (){
 				$('#5of4').removeClass('line-drawn');	
 				maxMoves--;
 				$('#box8').addClass('borderright');
+			}
+			if ($('#1of5').hasClass('line-drawn')) {
+				$('#1of5').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box5').addClass('borderbottom');
+				$('#box9').addClass('bordertop');
+			}
+			if ($('#2of5').hasClass('line-drawn')) {
+				$('#2of5').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box6').addClass('borderbottom');
+				$('#box10').addClass('bordertop');
+			}
+			if ($('#3of5').hasClass('line-drawn')) {
+				$('#3of5').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box7').addClass('borderbottom');
+				$('#box11').addClass('bordertop');
+			}
+			if ($('#4of5').hasClass('line-drawn')) {
+				$('#4of5').removeClass('line-drawn');	
+				maxMoves--;
+				$('#box8').addClass('borderbottom');
+				$('#box12').addClass('bordertop');
 			}	
 		}
 	}
