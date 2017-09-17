@@ -16,24 +16,16 @@ $(function (){
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
 				checkBox();
-				makeBox1();
-				if (makeBox1()) {
-					player1Score++
-					console.log('score up')
-				} else {
-					currentPlayer = 0
-					console.log('next player')
-				};
+				makeBox();
+				currentPlayer = 0; 
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
+				// makeBox();
 				checkBox();
-				makeBox2();
-				if (makeBox2()) {
-					player2Score++
-				} else {
-					currentPlayer = 1
-				};
+				makeBox();
+				// makeBox();
+				currentPlayer = 1;
 				
 			};
 			
@@ -285,7 +277,7 @@ $(function (){
 		};
 	};
 
-	function makeBox1() {
+	function makeBox() {
 		for (var i = 0; i < maxMoves2; i++) {
 			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
 				&& $('#box1').hasClass('bordertop') && currentPlayer == 1) {
@@ -293,29 +285,89 @@ $(function (){
 				$('#box1').removeClass('bordertop');
 				maxMoves2--;
 				$('#box1').addClass('box-complete1'); 
-				return true;
+	
 			};
-		};
-	};
-
-	function makeBox2() {
-		for (var i = 0; i < maxMoves2; i++) {
 			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
-					&& $('#box1').hasClass('bordertop') && currentPlayer == 0) {
-					$('#box1').removeClass('bordertop');
-					console.log('it should change');
-					maxMoves2--;
-					$('#box1').addClass('box-complete2');
-					return true; 
+				&& $('#box1').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box1').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box1').addClass('box-complete2'); 
+			};
+			if ($('#box2').hasClass('borderbottom') && $('#box2').hasClass('borderleft') && $('#box2').hasClass('borderright')
+				&& $('#box2').hasClass('bordertop') && currentPlayer == 1) {
+				$('#box2').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box2').addClass('box-complete1'); 
+			};
+			if ($('#box2').hasClass('borderbottom') && $('#box2').hasClass('borderleft') && $('#box2').hasClass('borderright')
+				&& $('#box2').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box2').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box2').addClass('box-complete2'); 
+			};
+			if ($('#box3').hasClass('borderbottom') && $('#box3').hasClass('borderleft') && $('#box3').hasClass('borderright')
+				&& $('#box3').hasClass('bordertop') && currentPlayer == 1) {
+				$('#box3').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box3').addClass('box-complete1'); 
+			};
+			if ($('#box3').hasClass('borderbottom') && $('#box3').hasClass('borderleft') && $('#box3').hasClass('borderright')
+				&& $('#box3').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box3').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box3').addClass('box-complete2'); 
+			};
+			if ($('#box4').hasClass('borderbottom') && $('#box4').hasClass('borderleft') && $('#box4').hasClass('borderright')
+				&& $('#box4').hasClass('bordertop') && currentPlayer == 1) {
+				$('#box4').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box4').addClass('box-complete1'); 
+			};
+			if ($('#box4').hasClass('borderbottom') && $('#box4').hasClass('borderleft') && $('#box4').hasClass('borderright')
+				&& $('#box4').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box4').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box4').addClass('box-complete2'); 
+			};
+			if ($('#box5').hasClass('borderbottom') && $('#box5').hasClass('borderleft') && $('#box5').hasClass('borderright')
+				&& $('#box5').hasClass('bordertop') && currentPlayer == 1) {
+				$('#box5').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box5').addClass('box-complete1'); 
+			};
+			if ($('#box5').hasClass('borderbottom') && $('#box5').hasClass('borderleft') && $('#box5').hasClass('borderright')
+				&& $('#box5').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box5').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box5').addClass('box-complete2'); 
+			};
+			if ($('#box6').hasClass('borderbottom') && $('#box6').hasClass('borderleft') && $('#box6').hasClass('borderright')
+				&& $('#box6').hasClass('bordertop') && currentPlayer == 1) {
+				$('#box6').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box6').addClass('box-complete1'); 
+			};
+			if ($('#box6').hasClass('borderbottom') && $('#box6').hasClass('borderleft') && $('#box6').hasClass('borderright')
+				&& $('#box6').hasClass('bordertop') && currentPlayer == 0) {
+				$('#box6').removeClass('bordertop');
+				console.log('it should change');
+				maxMoves2--;
+				$('#box6').addClass('box-complete2'); 
 			};
 		};
 	};
 
 
-	function switchPlayer1() {
-
-	}
-	function switchPlayer1() {}
 	playGame();
 
 
