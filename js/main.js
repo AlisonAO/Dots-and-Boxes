@@ -6,36 +6,36 @@ $(function (){
 	var count = 0; 
 	var maxMoves = 50;
 	var maxMoves2 = 24;
-	var $p1score = $('#player1-score')
-	var $p2score = $('#player2-score')
+	var $p1score = $('#player1-score');
+	var $p2score = $('#player2-score');
+	var $playerTurn = $('#playersturn');
 
 	function playGame() {
 		$('.lines').one('click', function(event) {
 			count++;
 			
-		// checkWinner();
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
 				checkBox();
-				// makeBox();
 				if (makeBox() == true) {
 					currentPlayer = 1;
-					player1Score++ 
+					player1Score++; 
 					$p1score.html(player1Score);
 				} else {
-					currentPlayer = 0; 
+					currentPlayer = 0;
+					$playerTurn.html('Player 2\'s\ Turn'); 
 				}
-				
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
 				checkBox();
 				if (makeBox() == true) {
 					currentPlayer = 0;
-					player2Score++ 
+					player2Score++; 
 					$p2score.html(player2Score);
 				} else {
-					currentPlayer = 1; 
+					currentPlayer = 1;
+					$playerTurn.html('Player 1\'s Turn'); 
 				}
 				
 				
