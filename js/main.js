@@ -15,16 +15,26 @@ $(function (){
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
 				checkBox();
-				makeBox();
-				currentPlayer = 0; 
+				// makeBox();
+				if (makeBox() == true) {
+					currentPlayer = 1; 
+				} else {
+					currentPlayer = 0; 
+				}
+				
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
 				// makeBox();
 				checkBox();
-				makeBox();
 				// makeBox();
-				currentPlayer = 1;
+				if (makeBox() == true) {
+					currentPlayer = 0; 
+				} else {
+					currentPlayer = 1; 
+				}
+				// makeBox();
+				
 				
 			};
 			
@@ -282,7 +292,8 @@ $(function (){
 				console.log('it should change');
 				$('#box1').removeClass('bordertop');
 				maxMoves2--;
-				$('#box1').addClass('box-complete1'); 
+				$('#box1').addClass('box-complete1');
+				return true; 
 	
 			};
 			if ($('#box1').hasClass('borderbottom') && $('#box1').hasClass('borderleft') && $('#box1').hasClass('borderright')
@@ -291,6 +302,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box1').addClass('box-complete2'); 
+				return true;
 			};
 			if ($('#box2').hasClass('borderbottom') && $('#box2').hasClass('borderleft') && $('#box2').hasClass('borderright')
 				&& $('#box2').hasClass('bordertop') && currentPlayer == 1) {
@@ -298,6 +310,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box2').addClass('box-complete1'); 
+				return true;
 			};
 			if ($('#box2').hasClass('borderbottom') && $('#box2').hasClass('borderleft') && $('#box2').hasClass('borderright')
 				&& $('#box2').hasClass('bordertop') && currentPlayer == 0) {
@@ -305,6 +318,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box2').addClass('box-complete2'); 
+				return;
 			};
 			if ($('#box3').hasClass('borderbottom') && $('#box3').hasClass('borderleft') && $('#box3').hasClass('borderright')
 				&& $('#box3').hasClass('bordertop') && currentPlayer == 1) {
