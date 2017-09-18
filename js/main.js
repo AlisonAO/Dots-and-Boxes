@@ -6,6 +6,8 @@ $(function (){
 	var count = 0; 
 	var maxMoves = 50;
 	var maxMoves2 = 24;
+	var $p1score = $('#player1-score')
+	var $p2score = $('#player2-score')
 
 	function playGame() {
 		$('.lines').one('click', function(event) {
@@ -17,7 +19,9 @@ $(function (){
 				checkBox();
 				// makeBox();
 				if (makeBox() == true) {
-					currentPlayer = 1; 
+					currentPlayer = 1;
+					player1Score++ 
+					$p1score.html(player1Score);
 				} else {
 					currentPlayer = 0; 
 				}
@@ -25,15 +29,14 @@ $(function (){
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
-				// makeBox();
 				checkBox();
-				// makeBox();
 				if (makeBox() == true) {
-					currentPlayer = 0; 
+					currentPlayer = 0;
+					player2Score++ 
+					$p2score.html(player2Score);
 				} else {
 					currentPlayer = 1; 
 				}
-				// makeBox();
 				
 				
 			};
@@ -284,6 +287,18 @@ $(function (){
 			};								
 		};
 	};
+
+	// var $boxes = $('.box');
+	// var $boxConditions = ['.bordertop', '.borderbottom', '.borderleft', '.borderright'];
+
+	// function makeBox() {
+	// 	for (var i = 0; i < maxMoves2; i++) {
+	// 		if ($boxes.eq(current[0]).css() === $boxConditions && currentPlayer === 1) {
+
+	// 		};
+
+	// 	};
+	// };
 
 	function makeBox() {
 		for (var i = 0; i < maxMoves2; i++) {
