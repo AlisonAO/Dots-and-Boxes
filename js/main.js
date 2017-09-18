@@ -318,7 +318,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box2').addClass('box-complete2'); 
-				return;
+				return true;
 			};
 			if ($('#box3').hasClass('borderbottom') && $('#box3').hasClass('borderleft') && $('#box3').hasClass('borderright')
 				&& $('#box3').hasClass('bordertop') && currentPlayer == 1) {
@@ -326,6 +326,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box3').addClass('box-complete1'); 
+				return true; 
 			};
 			if ($('#box3').hasClass('borderbottom') && $('#box3').hasClass('borderleft') && $('#box3').hasClass('borderright')
 				&& $('#box3').hasClass('bordertop') && currentPlayer == 0) {
@@ -333,6 +334,7 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box3').addClass('box-complete2'); 
+				return true; 
 			};
 			if ($('#box4').hasClass('borderbottom') && $('#box4').hasClass('borderleft') && $('#box4').hasClass('borderright')
 				&& $('#box4').hasClass('bordertop') && currentPlayer == 1) {
@@ -340,27 +342,31 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box4').addClass('box-complete1'); 
+				return true; 
 			};
 			if ($('#box4').hasClass('borderbottom') && $('#box4').hasClass('borderleft') && $('#box4').hasClass('borderright')
 				&& $('#box4').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box4').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box4').addClass('box-complete2'); 
+				$('#box4').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box5').hasClass('borderbottom') && $('#box5').hasClass('borderleft') && $('#box5').hasClass('borderright')
 				&& $('#box5').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box5').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box5').addClass('box-complete1'); 
+				$('#box5').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box5').hasClass('borderbottom') && $('#box5').hasClass('borderleft') && $('#box5').hasClass('borderright')
 				&& $('#box5').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box5').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box5').addClass('box-complete2'); 
+				$('#box5').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box6').hasClass('borderbottom') && $('#box6').hasClass('borderleft') && $('#box6').hasClass('borderright')
 				&& $('#box6').hasClass('bordertop') && currentPlayer == 1) {
@@ -368,13 +374,15 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box6').addClass('box-complete1'); 
+				return true; 
 			};
 			if ($('#box6').hasClass('borderbottom') && $('#box6').hasClass('borderleft') && $('#box6').hasClass('borderright')
 				&& $('#box6').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box6').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box6').addClass('box-complete2'); 
+				$('#box6').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box7').hasClass('borderbottom') && $('#box7').hasClass('borderleft') && $('#box7').hasClass('borderright')
 				&& $('#box7').hasClass('bordertop') && currentPlayer == 1) {
@@ -382,20 +390,23 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box7').addClass('box-complete1'); 
+				return true; 
 			};
 			if ($('#box7').hasClass('borderbottom') && $('#box7').hasClass('borderleft') && $('#box7').hasClass('borderright')
 				&& $('#box7').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box7').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box7').addClass('box-complete2'); 
+				$('#box7').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box8').hasClass('borderbottom') && $('#box6').hasClass('borderleft') && $('#box6').hasClass('borderright')
 				&& $('#box8').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box8').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box8').addClass('box-complete1'); 
+				$('#box8').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box8').hasClass('borderbottom') && $('#box8').hasClass('borderleft') && $('#box8').hasClass('borderright')
 				&& $('#box8').hasClass('bordertop') && currentPlayer == 0) {
@@ -403,27 +414,31 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box8').addClass('box-complete2'); 
+				return true; 
 			};
 			if ($('#box9').hasClass('borderbottom') && $('#box9').hasClass('borderleft') && $('#box9').hasClass('borderright')
 				&& $('#box9').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box9').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box9').addClass('box-complete1'); 
+				$('#box9').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box9').hasClass('borderbottom') && $('#box9').hasClass('borderleft') && $('#box9').hasClass('borderright')
 				&& $('#box9').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box9').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box9').addClass('box-complete2'); 
+				$('#box9').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box10').hasClass('borderbottom') && $('#box10').hasClass('borderleft') && $('#box10').hasClass('borderright')
 				&& $('#box10').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box10').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box10').addClass('box-complete1'); 
+				$('#box10').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box10').hasClass('borderbottom') && $('#box10').hasClass('borderleft') && $('#box10').hasClass('borderright')
 				&& $('#box10').hasClass('bordertop') && currentPlayer == 0) {
@@ -431,90 +446,103 @@ $(function (){
 				console.log('it should change');
 				maxMoves2--;
 				$('#box10').addClass('box-complete2'); 
+				return true; 
 			};
 			if ($('#box11').hasClass('borderbottom') && $('#box11').hasClass('borderleft') && $('#box11').hasClass('borderright')
 				&& $('#box11').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box11').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box11').addClass('box-complete1'); 
+				$('#box11').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box11').hasClass('borderbottom') && $('#box11').hasClass('borderleft') && $('#box11').hasClass('borderright')
 				&& $('#box11').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box11').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box11').addClass('box-complete2'); 
+				$('#box11').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box12').hasClass('borderbottom') && $('#box12').hasClass('borderleft') && $('#box12').hasClass('borderright')
 				&& $('#box12').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box12').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box12').addClass('box-complete1'); 
+				$('#box12').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box12').hasClass('borderbottom') && $('#box12').hasClass('borderleft') && $('#box12').hasClass('borderright')
 				&& $('#box12').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box12').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box12').addClass('box-complete2'); 
+				$('#box12').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box13').hasClass('borderbottom') && $('#box13').hasClass('borderleft') && $('#box13').hasClass('borderright')
 				&& $('#box13').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box13').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box13').addClass('box-complete1'); 
+				$('#box13').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box13').hasClass('borderbottom') && $('#box13').hasClass('borderleft') && $('#box13').hasClass('borderright')
 				&& $('#box13').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box13').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box13').addClass('box-complete2'); 
+				$('#box13').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box14').hasClass('borderbottom') && $('#box14').hasClass('borderleft') && $('#box14').hasClass('borderright')
 				&& $('#box14').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box14').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box14').addClass('box-complete1'); 
+				$('#box14').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box14').hasClass('borderbottom') && $('#box14').hasClass('borderleft') && $('#box14').hasClass('borderright')
 				&& $('#box14').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box14').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box14').addClass('box-complete2'); 
+				$('#box14').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box15').hasClass('borderbottom') && $('#box15').hasClass('borderleft') && $('#box15').hasClass('borderright')
 				&& $('#box14').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box15').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box15').addClass('box-complete1'); 
+				$('#box15').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box15').hasClass('borderbottom') && $('#box15').hasClass('borderleft') && $('#box15').hasClass('borderright')
 				&& $('#box15').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box15').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box15').addClass('box-complete2'); 
+				$('#box15').addClass('box-complete2');
+				return true;  
 			};
 			if ($('#box16').hasClass('borderbottom') && $('#box16').hasClass('borderleft') && $('#box16').hasClass('borderright')
 				&& $('#box16').hasClass('bordertop') && currentPlayer == 1) {
 				$('#box16').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box16').addClass('box-complete1'); 
+				$('#box16').addClass('box-complete1');
+				return true;  
 			};
 			if ($('#box16').hasClass('borderbottom') && $('#box16').hasClass('borderleft') && $('#box16').hasClass('borderright')
 				&& $('#box16').hasClass('bordertop') && currentPlayer == 0) {
 				$('#box16').removeClass('bordertop');
 				console.log('it should change');
 				maxMoves2--;
-				$('#box16').addClass('box-complete2'); 
+				$('#box16').addClass('box-complete2');
+				return true;  
 			};
 		};
 	};
