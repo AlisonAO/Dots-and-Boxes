@@ -1,14 +1,37 @@
 
-#gameboard {
-	background-color: yellow;
-	margin: 10px 200px;
-	width: 75%;
+body {
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	/*background-size: cover;*/
+	background-size: cover;
+	 background-size: 100% 100%;
+}
 
+#gameboard {
+	margin-top:5px;
+	margin-left: 350px;
+	width: 50%;
+	background-image: url("../images/lined-paper.png");
+	background-repeat: no-repeat;
+	padding-top: 10px;
 }
 
 #top-container {
 	text-align: center;
 	padding-top: 10px;
+	color: #454343;
+}
+
+.scores {
+	height: 50px;
+	width: 300px;
+	display: inline-block;
+	padding: 20px;
+
+}
+
+#game-grid {
+	margin-left: -200px;
 }
 
 #player1-score {
@@ -27,7 +50,6 @@ div.table {
   width: 600px;
   height: 500px;
   border-collapse: collapse;
-  border-color: black;
   margin-left: 240px;
 }
 
@@ -35,6 +57,7 @@ div.table {
   border width: 1px;
   border-style: dashed;
   padding: 4px 1px;
+   border-color: #454343;
 }
 
 .divTable{ 
