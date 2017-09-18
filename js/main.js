@@ -4,11 +4,15 @@ $(function (){
 	var player1Score = 0;
 	var player2Score = 0;
 	var count = 0; 
-	var maxMoves = 50;
-	var maxMoves2 = 24;
 	var $p1score = $('#player1-score');
 	var $p2score = $('#player2-score');
 	var $playerTurn = $('#playersturn');
+
+	var $instructions = $('#instructions')
+
+	$('#button').one('click', function(event){
+		$instructions.hide();
+	});
 
 	function playGame() {
 		$('.lines').one('click', function(event) {
@@ -66,7 +70,7 @@ $(function (){
 
 		}
 	};
-
+//<---This function checks if a box has all the border properties. If it does, then it will fill in the box with the approriate player color-->
 	function makeBox ($line) {
 
 		var actions = $line.data('actions').split(' ');
@@ -76,7 +80,6 @@ $(function (){
 			var current = actions[i].split('-');
 			var $thisBox = $('#' + current[0])
 
-		// debugger
 			if ($thisBox.is('.bordertop.borderbottom.borderleft.borderright')) {
 					console.log('it should change');
 			$thisBox.removeClass('bordertop');

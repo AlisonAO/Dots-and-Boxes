@@ -5,21 +5,70 @@ body {
 	/*background-size: cover;*/
 	background-size: cover;
 	 background-size: 100% 100%;
+	 font-family: 'Cabin Sketch', cursive;
 }
+body, a:hover {
+	cursor: url(http://cur.cursors-4u.net/others/oth-5/oth510.ani), url(http://cur.cursors-4u.net/others/oth-5/oth510.png), progress !important;
+} 
 
-#gameboard {
-	margin-top:5px;
+#instructions {
+	z-index:2;
+	margin-top: -2px;
 	margin-left: 350px;
 	width: 50%;
 	background-image: url("../images/lined-paper.png");
 	background-repeat: no-repeat;
 	padding-top: 10px;
+	position: absolute;
+	height: 800px;
+	text-align: center;
+	
+	/*display: none;*/
+}
+
+#instructions h2, p {
+	margin-left: -75px;
+	color: #454343;
+}
+
+p {
+	font-size: 20px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    margin-left: -75px;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+
+#titles {
+	margin-left: -35px;
+}
+
+#gameboard {
+	margin-top:10px;
+	margin-left: 350px;
+	width: 50%;
+	background-image: url("../images/lined-paper.png");
+	background-repeat: no-repeat;
+	padding-top: 10px;
+	/*display: none;*/
+
 }
 
 #top-container {
 	text-align: center;
 	padding-top: 10px;
 	color: #454343;
+	margin-top: -30px;
 }
 
 .scores {
@@ -31,7 +80,7 @@ body {
 }
 
 #game-grid {
-	margin-left: -200px;
+	margin-left: -220px;
 }
 
 #player1-score {
@@ -51,6 +100,7 @@ div.table {
   height: 500px;
   border-collapse: collapse;
   margin-left: 240px;
+  margin-top: 30px;
 }
 
 .divTable.table .divTableCell, .divTable.table .divTableHead {
@@ -89,17 +139,22 @@ div.table {
 
 /*This is the CSS to be added to the elements with JS*/
 .player1 {
-	background-color: green !important;
-	border-color: green !important;
+	background-image: url("../images/orange-scribble.png");
+	border-color: #ffa416 !important;
 	border-style: solid !important;
 	border-width: 1px !important;
+	background-size: contain;
+	background-repeat: repeat;
+
 }
 
 .player2 {
-	background-color: red !important;
-	border-color: red !important;
+	background-image: url("../images/blue-scribble.png");
+	border-color: #199acc !important;
 	border-style: solid !important;
 	border-width: 1px !important;
+	background-size: contain;
+	background-repeat: repeat;
 }
 
 .line-drawn {
@@ -130,14 +185,5 @@ div.table {
 	border-bottom-color: transparent;
 }
 
-.box-complete1  {
-	background-color: green;
-	border-color: green !important;
-}
-
-.box-complete2 {
-	background-color: red;
-	border-color: red !important;
-}
 
 
