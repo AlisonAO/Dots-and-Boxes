@@ -20,7 +20,6 @@ body, a:hover {
 	height: 800px;
 	text-align: center;
 	color: #454343;
-
 }
 
 #instructions p {
@@ -47,13 +46,19 @@ button {
     width: 100px; 
     height: 50px;
     margin-left: -10px;
-
-
+    margin: 0 auto;
 }
 
 button:hover {
     background-color: #555555;
     color: white;
+}
+
+img {
+	width: 100px;
+	height: 90px;
+	margin: 0 auto;
+}
 }
 
 
@@ -68,10 +73,9 @@ button:hover {
 	background-image: url("../images/lined-paper.png");
 	background-repeat: no-repeat;
 	padding-top: 10px;
-	height: 800px;
+	height: 900px;
 	text-align: center;
 	display: none;
-
 }
 
 #top-container {
@@ -102,19 +106,11 @@ button:hover {
 
 #game-grid {
 	margin-left: -220px;
+	padding-bottom: 90px;
 
 }
-
-#player1-score {
+.playerscore {
 	display: inline-block;
-}
-
-#player2-score {
-	display: inline-block;
-}
-
-#game-grid {
-    padding-bottom: 90px;
 }
 
 div.table {
@@ -158,6 +154,10 @@ div.table {
 	width: 25px
 }
 
+.dot {
+	background-color: #454343;
+	border-radius: 10px;
+}
 
 /*This is the CSS to be added to the elements with JS*/
 .player1 {
