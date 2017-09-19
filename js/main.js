@@ -11,7 +11,7 @@ $(function (){
 	var $instructions = $('#instructions')
 
 	$('#button').one('click', function(event){
-		$instructions.hide();
+		$instructions.slideUp(600);
 	});
 
 	function playGame() {
@@ -64,8 +64,6 @@ $(function (){
 				var current = actions[i].split('-');
 
 				$('#' + current[0]).addClass(current[1]);
-
-				console.log(current[0]);
 			}
 
 		}
