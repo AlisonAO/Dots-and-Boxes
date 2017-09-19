@@ -9,39 +9,51 @@ $(function (){
 	var $playerTurn = $('#playersturn');
 
 	var $instructions = $('#instructions')
+	var $gameboard = $('#gameboard')
 
 	$('#button').one('click', function(event){
 		$instructions.slideUp(600);
-	});
+		$gameboard.show()
 
+	});
+// <--- This is the game functions
 	function playGame() {
 		$('.lines').one('click', function(event) {
 			count++;
-			
+			winLose();
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
 				checkBox($(this));
+				scoreAdd = makeBox($(this));
 
-				if (makeBox($(this)) == true) {
+				if (scoreAdd == 1) {
 					currentPlayer = 1;
 					player1Score++; 
 					$p1score.html(player1Score);
+				} else if (scoreAdd == 2) {
+					currentPlayer = 1;
+					player1Score += 2;
+					$p1score.html(player1Score);
 				} else {
 					currentPlayer = 0;
-					$playerTurn.html('Player 2\'s\ Turn'); 
+					$playerTurn.html('Player Two\'s\ Turn'); 
 				}
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
 				checkBox($(this));
-
-				if (makeBox($(this)) == true) {
+				scoreAdd = makeBox($(this));
+				if (scoreAdd == 1) {
 					currentPlayer = 0;
 					player2Score++; 
 					$p2score.html(player2Score);
+				} else if (scoreAdd == 2) {
+					currentPlayer = 0;
+					player2Score += 2;
+					$p2score.html(player2Score);
 				} else {
 					currentPlayer = 1;
-					$playerTurn.html('Player 1\'s Turn'); 
+					$playerTurn.html('Player One\'s Turn'); 
 				}
 				
 				
@@ -72,7 +84,8 @@ $(function (){
 	function makeBox ($line) {
 
 		var actions = $line.data('actions').split(' ');
-		var madeBox = false;
+		var madeBox = 0;
+		console.log(actions);
 		
 		for (var i = 0; i < actions.length; i++) {
 			
@@ -80,18 +93,35 @@ $(function (){
 			var $thisBox = $('#' + current[0])
 
 			if ($thisBox.is('.bordertop.borderbottom.borderleft.borderright')) {
-				console.log('it should change');
+				
 				$thisBox.removeClass('bordertop');
 				if (currentPlayer === 1) {
 					$thisBox.addClass('player1');
 				} else {
 					$thisBox.addClass('player2');
 				}
-				madeBox = true;
+				madeBox += 1;
 			}	
+			console.log(madeBox);
 		};
 		return madeBox; 
 	};
+
+	function winLose () {
+		if (count === 40 && player1Score > player2Score) {
+				$playerTurn.html('Player One Wins!!');
+
+			} 
+		if (count === 40 && player2Score > player1Score) {
+			$playerTurn.html('Player Two Wins!!');
+			console.log(count); }
+	};
+
+	function playSound(path) {
+	    var sound = document.createElement('audio');
+	    sound.setAttribute('src', path);
+	    sound.play();
+	};	
 
 	playGame();
 

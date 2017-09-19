@@ -2,9 +2,8 @@
 body {
 	background-image: url("../images/background.jpg");
 	background-repeat: no-repeat;
-	/*background-size: cover;*/
 	background-size: cover;
-	 background-size: 100% 100%;
+	 background-size: 100%;
 	 font-family: 'Cabin Sketch', cursive;
 }
 body, a:hover {
@@ -12,27 +11,31 @@ body, a:hover {
 } 
 
 #instructions {
-	z-index:2;
-	margin-top: -2px;
-	margin-left: 350px;
-	width: 50%;
+	z-index:10;
+	margin: 0 auto;
+	width: 700px;
 	background-image: url("../images/lined-paper.png");
 	background-repeat: no-repeat;
 	padding-top: 10px;
-	position: absolute;
 	height: 800px;
 	text-align: center;
-	
-	/*display: none;*/
-}
-
-#instructions h2, p {
-	margin-left: -75px;
 	color: #454343;
+
 }
 
-p {
+#instructions p {
 	font-size: 20px;
+}
+
+#scoreboard {
+	font-size: 20px;
+	margin-top: -30px;
+}
+
+ul li {
+	color: #454343;
+	font-size: 20px;
+	list-style: none
 }
 
 button {
@@ -41,6 +44,11 @@ button {
     border: 2px solid #555555;
     margin-left: -75px;
     font-family: 'Cabin Sketch', cursive;
+    width: 100px; 
+    height: 50px;
+    margin-left: -10px;
+
+
 }
 
 button:hover {
@@ -54,13 +62,15 @@ button:hover {
 }
 
 #gameboard {
-	margin-top:10px;
-	margin-left: 350px;
-	width: 50%;
+	z-index:-1;
+	margin: 0 auto;
+	width: 700px;
 	background-image: url("../images/lined-paper.png");
 	background-repeat: no-repeat;
 	padding-top: 10px;
-	/*display: none;*/
+	height: 800px;
+	text-align: center;
+	display: none;
 
 }
 
@@ -69,18 +79,30 @@ button:hover {
 	padding-top: 10px;
 	color: #454343;
 	margin-top: -30px;
+	/*display: none;*/
 }
 
-.scores {
+.scores1 {
 	height: 50px;
 	width: 300px;
 	display: inline-block;
 	padding: 20px;
+	color: #ffa416;
+	font-size: 20px;
+}
 
+.scores2 {
+	height: 50px;
+	width: 300px;
+	display: inline-block;
+	padding: 20px;
+	color: #199acc;
+	font-size: 20px;
 }
 
 #game-grid {
 	margin-left: -220px;
+
 }
 
 #player1-score {
@@ -92,7 +114,7 @@ button:hover {
 }
 
 #game-grid {
-    padding-bottom: 50px;
+    padding-bottom: 90px;
 }
 
 div.table {
