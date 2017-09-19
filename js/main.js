@@ -17,14 +17,12 @@ $(function (){
 	function playGame() {
 		$('.lines').one('click', function(event) {
 			count++;
-
-			$this = $(this)
-			var label = $this.attr('label');
+			
 			if (currentPlayer === 1) {
-				$this.addClass('player1 line-drawn');
-				checkBox($this);
+				$(this).addClass('player1 line-drawn');
+				checkBox($(this));
 
-				if (makeBox(label) == true) {
+				if (makeBox($(this)) == true) {
 					currentPlayer = 1;
 					player1Score++; 
 					$p1score.html(player1Score);
@@ -34,10 +32,10 @@ $(function (){
 				}
 				
 			} else {
-				$this.addClass('player2 line-drawn');
-				checkBox($this);
+				$(this).addClass('player2 line-drawn');
+				checkBox($(this));
 
-				if (makeBox($this) == true) {
+				if (makeBox($(this)) == true) {
 					currentPlayer = 0;
 					player2Score++; 
 					$p2score.html(player2Score);
@@ -71,76 +69,31 @@ $(function (){
 		}
 	};
 //<---This function checks if a box has all the border properties. If it does, then it will fill in the box with the approriate player color-->
-// 	function makeBox ($line) {
+	function makeBox ($line) {
 
-// 		var actions = $line.data('actions').split(' ');
+		var actions = $line.data('actions').split(' ');
+		var madeBox = false;
 		
-// 		for (var i = 0; i < actions.length; i++) {
+		for (var i = 0; i < actions.length; i++) {
 			
-// 			var current = actions[i].split('-');
-// 			if ($('#' + current[0]).is('.bordertop.borderbottom.borderleft.borderright') && $('#' + current[1]).is('.bordertop.borderbottom.borderleft.borderright')) {
-// 							console.log('it should change');
-// 			$('#' + current[0]).removeClass('bordertop');
-// 			$('#' + current[1]).removeClass('bordertop');
-// 				if (currentPlayer === 1) {
-// 					$('#' + current[0]).addClass('player1');
-// 					$('#' + current[1]).addClass('player1');
-// 				} else {
-// 					$('#' + current[0]).addClass('player2');
-// 					$('#' + current[1]).addClass('player2');
-// 				}
+			var current = actions[i].split('-');
+			var $thisBox = $('#' + current[0])
 
-// 			if ($('#' + current[0]).is('.bordertop.borderbottom.borderleft.borderright')) {
-// 					console.log('it should change');
-// 			$('#' + current[0]).removeClass('bordertop');
-// 				if (currentPlayer === 1) {
-// 					$('#' + current[0]).addClass('player1');
-// 				} else {
-// 					$('#' + current[0]).addClass('player2');
-// 				}
-// 			}
-			
-// 			return true; 
-// 				}	
-// 	};
-// };
-
-
-function makeBox (label) {
-	str = label.split(" ");
-	str[0] = $("#" + str[0]);
-	if (str.length == 2) {
-		str[1] = $("#" + str[1]);
-	}
-	
-	console.log(str)
-		for (var i = 0; i < str.length; i++) {
-			if (str[i].is('.bordertop, .borderbottom, .borderleft, .borderright')) {
-				// boxes[i].removeClass('bordertop');
-				// if (currentPlayer === 1) {
-				// // $(boxes).addClass('player1');
-				// } else {
-				// // boxes[i].addClass('player2');
-				// }
-				console.log('hi')
-			return true; 
-			}
-
-	} 
-}
+			if ($thisBox.is('.bordertop.borderbottom.borderleft.borderright')) {
+				console.log('it should change');
+				$thisBox.removeClass('bordertop');
+				if (currentPlayer === 1) {
+					$thisBox.addClass('player1');
+				} else {
+					$thisBox.addClass('player2');
+				}
+				madeBox = true;
+			}	
+		};
+		return madeBox; 
+	};
 
 	playGame();
-
-
-	
-
-
-
-
-
-
-
-
 
 
 });
