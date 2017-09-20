@@ -113,8 +113,15 @@ button:hover {
     margin-top: -100px;
 }
 
+h1 {
+	transition: all .2s ease-in-out; 
+
+}
+h1:hover {
+	transform: scale(1.1); 
+}
 #titles {
-	margin-left: -35px;
+	margin-left: -35px;	
 }
 
 #gameboard {
