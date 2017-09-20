@@ -28,7 +28,7 @@ body, a:hover {
 
 #scoreboard {
 	font-size: 20px;
-	margin-top: -30px;
+	margin-top: -50px;
 }
 
 ul li {
@@ -37,11 +37,10 @@ ul li {
 	list-style: none
 }
 
-button {
+#button {
     background-color: white;
     color: black;
     border: 2px solid #555555;
-    margin-left: -75px;
     font-family: 'Cabin Sketch', cursive;
     width: 100px; 
     height: 50px;
@@ -54,13 +53,26 @@ button:hover {
     color: white;
 }
 
-img {
-	width: 100px;
-	height: 90px;
-	margin: 0 auto;
-}
+#restart {
+	background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    font-family: 'Cabin Sketch', cursive;
+    width: 50px; 
+    height: 25px;
+    margin-left: 500px;
+    margin-top: -100px;
+    display: inline-block;
 }
 
+
+img {
+	height: 200px;
+	margin: 0 auto;
+	padding-top: 50px;
+    padding-left: 250px; 
+    transform: rotate(12deg);
+}
 
 #titles {
 	margin-left: -35px;
@@ -86,6 +98,10 @@ img {
 	/*display: none;*/
 }
 
+#playersturn {
+	margin-bottom: 20px;
+    margin-top: 10px;
+}
 .scores1 {
 	height: 50px;
 	width: 300px;
@@ -167,7 +183,6 @@ div.table {
 	border-width: 1px !important;
 	background-size: contain;
 	background-repeat: repeat;
-
 }
 
 .player2 {
@@ -206,6 +221,4 @@ div.table {
 	border-bottom-width: 1px;
 	border-bottom-color: transparent;
 }
-
-
 

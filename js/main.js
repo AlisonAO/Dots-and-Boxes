@@ -10,14 +10,24 @@ $(function (){
 	var $instructions = $('#instructions');
 	var $gameboard = $('#gameboard');
 
+	// localStorage.removeItem('show'); <---Removes the stored page
+
  // <---Start button--->
 	$('#button').one('click', function(event){
 		playSound('sounds/school-bell.wav');
 		$instructions.slideUp(600);
-		$gameboard.show()
-		
+		$gameboard.show()	
 
 	});
+
+//<---Restart Button-->
+	$('#restart').one('click', function(event) {
+		restart();
+	});
+
+//<--Instructions Button--->
+	
+
 // <--- This is the game functions--->
 	function playGame() {
 		$('.lines').one('click', function(event) {
@@ -124,7 +134,21 @@ $(function (){
 	    var sound = document.createElement('audio');
 	    sound.setAttribute('src', path);
 	    sound.play();
-	};	
+	};
+//<---This function restarts the game-->
+	    var game = localStorage.getItem('game');
+    if(game === 'true'){
+        $('#gameboard').show();
+        $('#instructions').hide();
+    } 
+	function restart() {
+		localStorage.setItem('game', 'true');
+		location.reload();
+		event.preventDefault();
+        $('#gameboard').show();
+        $('#instructions').hide();
+        
+	}		
 
 	playGame();
 
