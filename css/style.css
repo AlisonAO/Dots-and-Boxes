@@ -22,15 +22,22 @@ body, a:hover {
 	color: #454343;
 }
 
+h2 {
+	margin-top: 10px;
+}
+
 #instructions p {
 	font-size: 20px;
 }
 
 #scoreboard {
 	font-size: 20px;
-	margin-top: -50px;
+	margin-top: -70px;
 }
 
+span {
+	color: black;
+}
 ul li {
 	color: #454343;
 	font-size: 20px;
@@ -75,16 +82,35 @@ button:hover {
     margin-left: 5px;
     margin-top: -100px;
     display: inline-block;
+    z-index: 10;
 }
 
 
-
-img {
-	height: 200px;
-	margin: 0 auto;
-	padding-top: 50px;
-    padding-left: 250px; 
+#doodle {
+	height: 100px;
+    margin: 0 auto;
+    padding-left: 250px;
     transform: rotate(12deg);
+    z-index: -2;
+    width: 300px;
+    margin-top: -90px;
+}
+
+#doodle2 {
+	    width: 300px;
+    height: 300px;
+    z-index: -1;
+    margin-left: -380px;
+    margin-top: -40px;
+}
+
+#doodle3 {
+	height: 100px;
+    margin: 0 auto;
+    padding-left: 290px;
+    transform: rotate(345deg);
+    z-index: -5;
+    margin-top: -100px;
 }
 
 #titles {
@@ -112,8 +138,8 @@ img {
 }
 
 #playersturn {
-	margin-bottom: 20px;
-    margin-top: 10px;
+	margin-top: 0px;
+    margin-bottom: 50px;
 }
 .scores1 {
 	height: 50px;
@@ -135,7 +161,7 @@ img {
 
 #game-grid {
 	margin-left: -220px;
-	padding-bottom: 90px;
+	margin-top: -20px;
 
 }
 .playerscore {

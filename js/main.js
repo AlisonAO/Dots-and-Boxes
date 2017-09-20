@@ -13,11 +13,10 @@ $(function (){
 	// localStorage.removeItem('game'); // <---Removes the stored page
 
  // <---Start button--->
-	$('#button').one('click', function(event){
+	$('#button').on('click', function(event){
 		playSound('sounds/school-bell.wav');
 		$instructions.slideUp(600);
 		$gameboard.show()	
-
 	});
 
 //<---Restart Button-->
@@ -71,9 +70,7 @@ $(function (){
 					} else {
 						currentPlayer = 1;
 						$playerTurn.html('Player One\'s Turn'); 
-					}
-				
-				
+				}
 			};
 			
 		});
@@ -140,10 +137,10 @@ $(function (){
 	};
 //<---This function restarts the game-->
 	    var game = localStorage.getItem('game');
-    if(game === 'true'){
-        $('#gameboard').show();
-        $('#instructions').hide();
-    } 
+		    if(game === 'true'){
+		        $('#gameboard').show();
+		        $('#instructions').hide();
+		    } 
 	function restart() {
 		localStorage.setItem('game', 'true');
 		location.reload();
@@ -151,9 +148,17 @@ $(function (){
         $('#gameboard').show();
         $('#instructions').hide();
         
-	}		
+	};		
 
 	playGame();
+
+
+
+
+
+
+
+
 
 
 });
