@@ -10,7 +10,7 @@ $(function (){
 	var $instructions = $('#instructions');
 	var $gameboard = $('#gameboard');
 
-	// localStorage.removeItem('show'); <---Removes the stored page
+	// localStorage.removeItem('game'); // <---Removes the stored page
 
  // <---Start button--->
 	$('#button').one('click', function(event){
