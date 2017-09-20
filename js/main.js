@@ -21,12 +21,15 @@ $(function (){
 	});
 
 //<---Restart Button-->
-	$('#restart').one('click', function(event) {
+	$('#restart').on('click', function(event) {
 		restart();
 	});
 
 //<--Instructions Button--->
-	
+	$('#instruct').on('click', function(event) {
+		$instructions.show();
+		$gameboard.hide()	
+	});
 
 // <--- This is the game functions--->
 	function playGame() {
