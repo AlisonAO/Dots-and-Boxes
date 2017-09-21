@@ -5,11 +5,11 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
+<!-- Instructions div. This div will be hidden when the game screen is show-->
 		<div id="instructions">
-			
 			<h2>Welcome to <br> Dots & Boxes!</h2>
 			<div><img id="doodle" src="images/paper-plane.png"></div>
 			<p>The aim of the game is to create the most amount of boxes<br> compared to your opponent.
@@ -24,6 +24,7 @@
 			<button id="button">Start</button><br>
 			<div><img id="doodle2" src="images/doodle2.png"></div>
 		</div>
+<!-- This is the gameboard div. It will be hidden when the instructions div is shown -->
 		<div id="gameboard">
 			<div id="top-container">
 				<div id="titles">
@@ -33,7 +34,7 @@
 					<button id="restart">Restart</button>
 					<h3 id="playersturn">Player One's Turn</h3>
 						<div><img id="doodle3" src="images/sketch.png"></div>
-
+<!-- This is the gameboard. It consists of the title, scoreboard and game grid -->
 				</div>
 				<div id="scoreboard">
 					<div class="scores1">
@@ -49,7 +50,7 @@
 							</div>
 					</div>
 				</div>
-
+<!-- This is the game grid. The table is made up of different size divs -->
 			<div id="game-grid">
 				<div class="divTable table">
 					<div class="divTableBody">

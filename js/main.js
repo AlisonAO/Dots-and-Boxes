@@ -1,5 +1,5 @@
 $(function (){
-
+// <---Variables used for the JS code --->
 	var currentPlayer = 1
 	var player1Score = 0;
 	var player2Score = 0;
@@ -10,9 +10,9 @@ $(function (){
 	var $instructions = $('#instructions');
 	var $gameboard = $('#gameboard');
 
-	// localStorage.removeItem('game'); // <---Removes the stored page
+// localStorage.removeItem('game'); // <---Removes the stored page
 
- // <---Start button--->
+// <---Start button--->
 	$('#button').on('click', function(event){
 		playSound('sounds/school-bell.wav');
 		$instructions.slideUp(600);
@@ -38,7 +38,7 @@ $(function (){
 			winLose();
 			if (currentPlayer === 1) {
 				$(this).addClass('player1 line-drawn');
-				checkBox($(this));
+				drawLine($(this));
 				scoreAdd = makeBox($(this));
 
 					if (scoreAdd == 1) {
@@ -56,7 +56,7 @@ $(function (){
 				
 			} else {
 				$(this).addClass('player2 line-drawn');
-				checkBox($(this));
+				drawLine($(this));
 				scoreAdd = makeBox($(this));
 
 					if (scoreAdd == 1) {
@@ -77,8 +77,8 @@ $(function (){
 		
 	};
 
-//<---This function adds different border properties if a line has been clicked--->
-	function checkBox($line) {
+//<---This function adds different border properties to the corresponding box if a line next to it has been clicked--->
+	function drawLine($line) {
 
 		var actions = $line.data('actions').split(' ');
 		
@@ -152,14 +152,5 @@ $(function (){
 	};		
 
 	playGame();
-
-
-
-
-
-
-
-
-
 
 });

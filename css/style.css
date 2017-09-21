@@ -35,13 +35,10 @@ h2 {
 	margin-top: -70px;
 }
 
-span {
-	color: black;
-}
 ul li {
 	color: #454343;
 	font-size: 20px;
-	list-style: none
+	list-style: none;
 }
 
 #button {
@@ -53,9 +50,10 @@ ul li {
     height: 50px;
     margin-left: -10px;
     margin: 0 auto;
+    -webkit-transition-duration: 0.4s;
 }
 
-button:hover {
+#button:hover {
     background-color: #555555;
     color: white;
 }
@@ -70,6 +68,12 @@ button:hover {
     margin-left: 400px;
     margin-top: -100px;
     display: inline-block;
+    transition-duration: 0.4s;
+}
+
+#restart:hover {
+	background-color: #555555;
+    color: white;
 }
 
 #instruct {
@@ -83,6 +87,12 @@ button:hover {
     margin-top: -100px;
     display: inline-block;
     z-index: 10;
+    transition-duration: 0.4s;
+}
+
+#instruct:hover {
+	background-color: #555555;
+    color: white;
 }
 
 
@@ -97,7 +107,7 @@ button:hover {
 }
 
 #doodle2 {
-	    width: 300px;
+	width: 300px;
     height: 300px;
     z-index: -1;
     margin-left: -380px;
@@ -141,12 +151,12 @@ h1:hover {
 	padding-top: 10px;
 	color: #454343;
 	margin-top: -30px;
-	/*display: none;*/
 }
 
 #playersturn {
 	margin-top: 0px;
     margin-bottom: 50px;
+    font-size: 25px;
 }
 .scores1 {
 	height: 50px;
@@ -187,7 +197,7 @@ div.table {
   border width: 1px;
   border-style: dashed;
   padding: 4px 1px;
-   border-color: #454343;
+  border-color: #454343;
 }
 
 .divTable{ 
@@ -218,7 +228,7 @@ div.table {
 
 .dot {
 	background-color: #454343;
-	border-radius: 10px;
+	border-radius: 13px;
 }
 
 /*This is the CSS to be added to the elements with JS*/
