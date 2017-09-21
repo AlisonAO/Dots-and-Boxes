@@ -6,13 +6,19 @@ A take on a classic game played in school; the aim of the game is try to create 
 
 You can play this game locally or in browser.
 
-To play this game in browser, click the link here:
+To play this game in browser, click the link here: [Dots & Boxes](https://alisonao.github.io/Dots-and-Boxes/)
 
 To play this game locally:
 
-1. Clone or download this repository from git@github.com:AlisonAO/project-1
+1. Clone or download this repository from  
+```
+git@github.com:AlisonAO/project-1
+```
 
-2. Open index.html in the terminal or in the browser to start the game.
+2. Open 
+```
+index.html
+```in the terminal or in the browser to start the game.
 
  
 ## Instructions
