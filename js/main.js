@@ -82,18 +82,18 @@ $(function (){
 
 		var actions = $line.data('actions').split(' ');
 		
-		if ($line.hasClass('line-drawn')) {
+			if ($line.hasClass('line-drawn')) {
 
-			$line.removeClass('line-drawn');
+				$line.removeClass('line-drawn');
 
-			for (var i = 0; i < actions.length; i++) {
-				
-				var current = actions[i].split('-');
+				for (var i = 0; i < actions.length; i++) {
+					
+					var current = actions[i].split('-');
 
-				$('#' + current[0]).addClass(current[1]);
+					$('#' + current[0]).addClass(current[1]);
+				}
+
 			}
-
-		}
 	};
 //<---This function checks if a box has all the border properties. If it does, then it will fill in the box with the approriate player colour-->
 	function makeBox ($line) {
