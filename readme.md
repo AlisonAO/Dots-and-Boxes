@@ -17,12 +17,12 @@ To play this game locally:
  
 ## Instructions
 
- * This is a two player 
+ * This is a two player game. 
  * Take it in turns to click on a line to mark it with your colour.
  * Four filled lines are needed (regardless of their colour) to make up a box.
  * The person who clicks on the fourth line of the box will create it, and get another turn.
  * The more boxes you create the more turns you get.
- * The person with the most boxes created, once all the boxes are filled, will be the winner
+ * The person with the most boxes created, once all the boxes are filled, will be the winner.
  
 ## Screenshots
  
