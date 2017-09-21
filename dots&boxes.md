@@ -22,5 +22,9 @@ This game is run in the browser. Click the link to play:
  
 ## Languages
  
- The languages used to make the game are HTML, CSS and JavaScript (with use of jQuery).
+The languages used to make the game are HTML, CSS and JavaScript (with use of jQuery).
  
+## Future Modifications
+
+ 
+ Possible 
