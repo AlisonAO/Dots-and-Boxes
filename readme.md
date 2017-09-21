@@ -12,7 +12,7 @@ To play this game locally:
 
 1. Clone or download this repository from `git@github.com:AlisonAO/project-1`.
 
-2. Open `index.html` in the terminal or in the browser to start the game.
+2. Open `index.html` in the terminal to start the game.
 
  
 ## Instructions
