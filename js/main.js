@@ -74,6 +74,7 @@ $(function (){
 			};
 			
 		});
+		
 	};
 
 //<---This function adds different border properties if a line has been clicked--->
